@@ -1,0 +1,97 @@
+import * as Notifications from "expo-notifications";
+import * as Device from "expo-device";
+import { Platform } from "react-native";
+
+// Set notification handler for foreground notifications
+Notifications.setNotificationHandler({
+  handleNotification: async () => ({
+    shouldShowAlert: true,
+    shouldPlaySound: true,
+    allowSound: true,
+    shouldSetBadge: false,
+  }),
+});
+
+export async function scheduleNotification(title, date) {
+  console.log("scheduleNotification = " + title + " " + date);
+  const trigger = new Date(`${date}`);
+  //console.log("trigger = " + trigger);
+  await Notifications.scheduleNotificationAsync({
+    content: {
+      title: title,
+      body: "Time to pray.",
+    },
+    trigger: { date: trigger },
+  });
+}
+
+export const cancelAllScheduledNotifications = async () => {
+  return;
+  try {
+    const scheduledNotifications =
+      await Notifications.getAllScheduledNotificationsAsync();
+    console.log("Scheduled Notifications:", scheduledNotifications);
+
+    if (scheduledNotifications.length === 0) {
+      console.log("No scheduled notifications found.");
+    } else {
+      for (const notification of scheduledNotifications) {
+        try {
+          await Notifications.cancelScheduledNotificationAsync(
+            notification.identifier
+          );
+          console.log(
+            `Cancelled notification with identifier: ${notification.identifier}`
+          );
+        } catch (cancelError) {
+          console.error(
+            `Error cancelling notification with identifier: ${notification.identifier}`,
+            cancelError
+          );
+        }
+      }
+      console.log("All notifications cancelled.");
+    }
+  } catch (error) {
+    console.error("Error retrieving scheduled notifications:", error);
+  }
+};
+
+export async function getScheduledNotifications() {
+  const notifications = await Notifications.getAllScheduledNotificationsAsync();
+  console.log("Scheduled Notifications:", notifications);
+}
+
+// Function to register for push notifications
+export async function registerForPushNotificationsAsync() {
+  console.log("registerForPushNotificationsAsync");
+  let token;
+  if (Device.isDevice) {
+    const { status: existingStatus } =
+      await Notifications.getPermissionsAsync();
+    let finalStatus = existingStatus;
+    if (existingStatus !== "granted") {
+      const { status } = await Notifications.requestPermissionsAsync();
+      finalStatus = status;
+    }
+    if (finalStatus !== "granted") {
+      alert("Failed to get push token for push notification!");
+      return;
+    }
+    token = (await Notifications.getExpoPushTokenAsync()).data;
+    console.log("Push token received:", token);
+  } else {
+    alert("Must use physical device for Push Notifications");
+  }
+
+  if (Platform.OS === "android") {
+    Notifications.setNotificationChannelAsync("default", {
+      name: "default",
+      importance: Notifications.AndroidImportance.MAX,
+      vibrationPattern: [0, 250, 250, 250],
+      lightColor: "#FF231F7C",
+    });
+  }
+
+  return token;
+}
