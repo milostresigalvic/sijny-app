@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 import { loadValue } from "@/app/utils/storageUtils";
 
-const PrayerTimesComponent = ({ prayerTimes }) => {
+const PrayerTimesComponent = ({ isFromMonthlyTimes, prayerTimes }) => {
   const [selectedPrayerTimes, setSelectedPrayerTimes] = useState({
     fajr: true,
     imsak: true,
@@ -58,8 +58,16 @@ const PrayerTimesComponent = ({ prayerTimes }) => {
         if (key !== "Date" && key !== "Islamic Date") {
           return (
             <View key={key} style={styles.textContainer}>
-              <Text style={styles.label}>{key}</Text>
-              <Text style={styles.value}>{prayerTimes[key]}</Text>
+              <Text
+                style={isFromMonthlyTimes ? styles.labelMonthly : styles.label}
+              >
+                {key}
+              </Text>
+              <Text
+                style={isFromMonthlyTimes ? styles.valueMonthly : styles.value}
+              >
+                {prayerTimes[key]}
+              </Text>
             </View>
           );
         }
@@ -110,7 +118,7 @@ const styles = StyleSheet.create({
   },
   textContainer: {
     width: "100%",
-
+    textAlign: "left",
     paddingBottom: 0,
     paddingTop: 0,
     fontFamily: "RobotoRegular",
@@ -122,6 +130,29 @@ const styles = StyleSheet.create({
     alignItems: "left", // Center them vertically
     width: "100%", // Ensure the container takes full width
   },
+  valueMonthly: {
+    flex: 1,
+    textAlign: "left",
+    fontFamily: "RobotoBold",
+    marginBottom: 0,
+    fontSize: 12,
+    color: "#333333",
+    paddingVertical: 14,
+    paddingLeft: 20,
+  },
+  labelMonthly: {
+    textAlign: "center",
+    paddingBottom: 5,
+    color: "#333333",
+    fontFamily: "RobotoRegular",
+    flex: 1,
+    marginBottom: 0,
+    fontSize: 12,
+    paddingLeft: 20,
+    borderRightWidth: 1,
+    borderRightColor: "#ddd",
+    paddingVertical: 14,
+  },
   label: {
     textAlign: "center",
     paddingBottom: 5,
@@ -129,17 +160,18 @@ const styles = StyleSheet.create({
     fontFamily: "RobotoRegular",
     flex: 1,
     marginBottom: 0,
-    fontSize: 15,
+    fontSize: 20,
     borderRightWidth: 1,
     borderRightColor: "#ddd",
     paddingVertical: 14,
   },
+
   value: {
     flex: 1,
     textAlign: "center",
     fontFamily: "RobotoBold",
     marginBottom: 0,
-    fontSize: 14,
+    fontSize: 20,
     color: "#333333",
     paddingVertical: 14,
   },

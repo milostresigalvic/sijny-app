@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     textTransform: "uppercase",
   },
   donateButtonPressed: {
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
   },
   buttonText: {
     color: "#fff",

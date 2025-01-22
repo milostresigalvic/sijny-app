@@ -200,13 +200,13 @@ export default function HomeScreen() {
 
   const fetchPostsAndEvents = async () => {
     fetchData(
-      "https://sijny.org.uk//wp-json/wp/v2/posts",
+      "https://sijny.org/wp-json/wp/v2/posts",
       setPosts,
       setLoading,
       setError
     );
     fetchData(
-      "https://sijny.org.uk/wp-json/tribe/events/v1/events",
+      "https://sijny.org/wp-json/tribe/events/v1/events",
       (data) => {
         setEvents(data.events || []);
       },
@@ -219,7 +219,7 @@ export default function HomeScreen() {
     const data = content.data;
     if (data.category === "news") {
       fetchData(
-        "https://sijny.org.uk//wp-json/wp/v2/posts",
+        "https://sijny.org/wp-json/wp/v2/posts",
         (posts: any) => {
           router.push(`post?postId=${posts[0].id}`);
         },

@@ -41,7 +41,7 @@ export const BoxSection = ({ router, openPortal }) => {
         <Box
           text="Times"
           iconSource={require("@/assets/images/i1.jpg")}
-          onPress={() => router.push("monthlyTimes")}
+          onPress={() => router.push("times")}
         />
         <Box
           text="Events"
@@ -49,7 +49,7 @@ export const BoxSection = ({ router, openPortal }) => {
           onPress={() => router.push("events")}
         />
         <Box
-          text="Watch Live"
+          text="Live"
           iconSource={require("@/assets/images/i3.jpg")}
           onPress={() => router.push("live")}
         />
@@ -66,7 +66,7 @@ export const BoxSection = ({ router, openPortal }) => {
         <Box
           text="About Us"
           iconSource={require("@/assets/images/i6.jpg")}
-          onPress={() => router.push("https://sijny.org.uk/about-us/")}
+          onPress={() => router.push("https://sijny.org/about-us/")}
         />
         <Box
           text="Contact"

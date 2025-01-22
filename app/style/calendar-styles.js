@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   sectionHeaderWrap: {
     paddingBottom: 60,
     paddingTop: 20,
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
     width: "100%",
   },
   sectionSubHeader: {
@@ -93,13 +93,14 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   todayButtonPressable: {
-    backgroundColor: "#000",
+    backgroundColor: "#be6b03",
     borderRadius: 5,
     borderWidth: 2,
     borderColor: "#fff",
     paddingHorizontal: 20,
     paddingVertical: 8,
-    borderBottomWidth: 0,
+    borderBottomWidth: 2,
+    borderBottomColor: "red",
   },
   todayButton: {
     fontSize: 12,
@@ -114,11 +115,11 @@ const styles = StyleSheet.create({
 
   sectionContent: {
     paddingBottom: 85,
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
     width: "100%",
   },
   sectionHeader: {
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
     flexDirection: "row",
     alignItems: "center",
     paddingBottom: 20,

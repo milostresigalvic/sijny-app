@@ -55,7 +55,7 @@ const formatDate = (date) => {
   const mm = months[date.getMonth()];
   const yyyy = date.getFullYear();
 
-  return `${day}, ${dd}. ${mm} ${yyyy}`;
+  return `${day}, ${dd}. ${mm} `;
 };
 
 const IslamicCalendar = () => {
@@ -203,6 +203,7 @@ const IslamicCalendar = () => {
         <View>
           {currentTimes.Date ? (
             <PrayerTimesComponentCalendarTimes
+              isFromMonthlyTimes={false}
               prayerTimes={convertPrayerTimesTo24hFormat(currentTimes)}
             />
           ) : (

@@ -325,7 +325,7 @@ const IslamicCalendar = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     minWidth: 30,
-                    padding: 5,
+                    padding: 2,
                     backgroundColor: isMarked ? backgroundColor : "transparent",
                   }}
                 >
@@ -341,20 +341,6 @@ const IslamicCalendar = () => {
                       }}
                     >
                       {gregorianDay}
-                    </Text>
-
-                    {/* Display Lunar Date */}
-                    <Text
-                      style={{
-                        fontSize: 14, // Smaller font for Lunar date
-                        color: isMarked
-                          ? "white"
-                          : state === "disabled"
-                          ? "gray"
-                          : "#f69400", // Custom color for Lunar date
-                      }}
-                    >
-                      {lunarDay}
                     </Text>
                   </View>
                 </Pressable>

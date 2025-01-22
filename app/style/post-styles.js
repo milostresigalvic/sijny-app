@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   sectionHeader: {
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 35,

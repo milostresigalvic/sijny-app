@@ -21,7 +21,9 @@ export default function HomeScreen() {
   }, [navigation]);
 
   const openYouTube = () => {
-    Linking.openURL("https://www.youtube.com/c/sijny");
+    Linking.openURL(
+      "https://www.youtube.com/channel/UCpWdl4r1eYImekI0yvIuYUg/live"
+    );
   };
 
   return (
@@ -36,7 +38,7 @@ export default function HomeScreen() {
 
             <Pressable onPress={openYouTube} style={style.youtubeButton}>
               <Icon name="logo-youtube" style={style.youtubeIcon} />
-              <Text style={style.youtubeText}>sijny Islamic Centre</Text>
+              <Text style={style.youtubeText}>Youtube Hicksville Center </Text>
             </Pressable>
           </View>
         </View>

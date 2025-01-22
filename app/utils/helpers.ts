@@ -173,7 +173,7 @@ export const fetchCSVFromURL = async () => {
 
       Date = formatDateFromLineToDotSepareted(Date);
 
-      console.log(`Row ${index + 1}:`, row); // Log each row
+      //console.log(`Row ${index + 1}:`, row); // Log each row
       return { Date, Imsak, Fajr, Sunrise, Zuhr, Sunset, Maghrib };
     });
 

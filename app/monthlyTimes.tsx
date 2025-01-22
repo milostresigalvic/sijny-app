@@ -259,7 +259,7 @@ const MonthlyTimes = () => {
                 arrowColor: "#fff", // Set the arrow color (e.g., red)
                 "stylesheet.calendar.header": {
                   header: {
-                    backgroundColor: "#c09400", // Header background color
+                    backgroundColor: "#1b7248", // Header background color
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
@@ -294,6 +294,7 @@ const MonthlyTimes = () => {
             </Text>
             {currentTimes.Date ? (
               <PrayerTimesComponentCalendarTimes
+                isFromMonthlyTimes={true}
                 prayerTimes={convertPrayerTimesTo24hFormat(currentTimes)}
               />
             ) : (

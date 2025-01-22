@@ -64,7 +64,11 @@ export default function SinglePost() {
       setLoading(true);
       setPost(null);
       setError(null);
-      fetchData(`https://sijny.org.uk//wp-json/wp/v2/posts/${postId}`, setPost);
+
+      https: fetchData(
+        `https://sijny.org//wp-json/wp/v2/posts/${postId}`,
+        setPost
+      );
     } else {
       setError("No postId provided in the URL");
       setLoading(false);

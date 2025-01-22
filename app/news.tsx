@@ -31,7 +31,7 @@ export default function HomeScreen() {
   const fetchData = useCallback(async () => {
     try {
       const response = await fetch(
-        "https://sijny.org.uk//wp-json/wp/v2/posts?per_page=10"
+        "https://sijny.org//wp-json/wp/v2/posts?per_page=10"
       );
       const json = await response.json();
       setPosts(json);

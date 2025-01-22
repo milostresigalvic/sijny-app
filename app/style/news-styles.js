@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   sectionHeader: {
-    backgroundColor: "#c09400",
+    backgroundColor: "#1b7248",
     alignItems: "center",
     marginBottom: 10,
     paddingBottom: 55,
