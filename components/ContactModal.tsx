@@ -29,26 +29,23 @@ const ContactModal = ({ visible, onClose }) => {
 
           {/* Website Link */}
           <TouchableOpacity
-            onPress={() => handleLinkPress("https://hyderi.org.uk/")}
+            onPress={() => handleLinkPress("https://sijny.org/")}
           >
             <View style={styles.linkContainer}>
-              <Text style={styles.modalLink}>Visit our Website →</Text>
+              <Text style={styles.modalLink}>
+                Visit our Website: sijny.org →
+              </Text>
             </View>
           </TouchableOpacity>
 
           {/* Email Link */}
           <TouchableOpacity
-            onPress={() => handleLinkPress("mailto:secretariat@hyderi.org.uk")}
+            onPress={() => handleLinkPress("mailto:secretariat@sijny.org")}
           >
             <View style={styles.linkContainer}>
-              <Text style={styles.modalLink}>Email →</Text>
-            </View>
-          </TouchableOpacity>
-
-          {/* Email Link */}
-          <TouchableOpacity onPress={() => handleLinkPress("tel:02087697553")}>
-            <View style={styles.linkContainer}>
-              <Text style={styles.modalLink}>Call Us →</Text>
+              <Text style={styles.modalLink}>
+                Email us: secretariat@sijny.org →
+              </Text>
             </View>
           </TouchableOpacity>
 
@@ -56,7 +53,7 @@ const ContactModal = ({ visible, onClose }) => {
           <TouchableOpacity
             onPress={() =>
               handleLinkPress(
-                "https://www.google.com/maps/place/Hyderi+Islamic+Centre/@51.3468188,-0.0338993,17z/data=!3m1!4b1!4m6!3m5!1s0x4875fff06e935e75:0x2c374c667a96a548!8m2!3d51.3468188!4d-0.0313244!16s%2Fg%2F11htbz08cf?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D"
+                "https://www.google.com/search?q=83+Ludy+St%2C+Hicksville+NY+11801&oq=83+Ludy+St%2C+Hicksville+NY+11801&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGD0yBggDEEUYPDIGCAQQLhhA0gEHNTM5ajBqOagCALACAA&sourceid=chrome&ie=UTF-8"
               )
             }
           >

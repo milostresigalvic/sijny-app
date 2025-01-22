@@ -64,10 +64,7 @@ export default function SinglePost() {
       setLoading(true);
       setPost(null);
       setError(null);
-      fetchData(
-        `https://hyderi.org.uk//wp-json/wp/v2/posts/${postId}`,
-        setPost
-      );
+      fetchData(`https://sijny.org.uk//wp-json/wp/v2/posts/${postId}`, setPost);
     } else {
       setError("No postId provided in the URL");
       setLoading(false);

@@ -53,19 +53,8 @@ const PrayerTimesComponent = ({ prayerTimes, currentIslamicDate }) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.iconWithText}>
-          <Image
-            source={require("../assets/images/clock.jpg")}
-            style={styles.icon}
-          />
           <Text style={styles.headerDate}>{formatDate()}</Text>
         </View>
-
-        <Text style={styles.headerDate}>
-          {currentIslamicDate
-            ? `${currentIslamicDate}`
-            : "Loading Islamic date..."}
-          , 1446
-        </Text>
       </View>
 
       <View style={styles.homeTimesWrap}>
@@ -90,7 +79,7 @@ const PrayerTimesComponent = ({ prayerTimes, currentIslamicDate }) => {
       <View style={styles.undertimestextWrap}>
         <Text style={styles.undertimestext}>
           {selectedSource === "TIMETABLE"
-            ? "Source: Timetable in accordance with Najaf.ofg"
+            ? "Source: SIJNY Timetable"
             : "Source: GPS"}
         </Text>
       </View>
@@ -104,7 +93,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
-    backgroundColor: "#f6f6f6",
+    backgroundColor: "#1b7248",
     width: "100%",
 
     elevation: 0,
@@ -123,7 +112,7 @@ const styles = StyleSheet.create({
     paddingBottom: 7,
   },
   undertimestext: {
-    color: "#000",
+    color: "#fff",
     textAlign: "center",
     width: "100%",
     fontSize: 10,
@@ -131,7 +120,7 @@ const styles = StyleSheet.create({
   },
   header: {
     width: "100%",
-    backgroundColor: "#333333",
+    backgroundColor: "#071425",
     alignItems: "center",
     marginBottom: 10,
     paddingTop: 15,
@@ -187,12 +176,12 @@ const styles = StyleSheet.create({
   label: {
     textAlign: "center",
     paddingBottom: 1,
-    color: "#333333",
+    color: "#fff",
     fontFamily: "RobotoRegular",
     textTransform: "capitalize",
     alignSelf: "center",
     marginBottom: 7,
-    fontSize: 11,
+    fontSize: 10,
   },
   value: {
     // margin: "auto",
@@ -200,9 +189,8 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     fontFamily: "RobotoBold",
-
-    fontSize: 12,
-    color: "#333333",
+    fontSize: 13,
+    color: "#fff",
   },
 });
 

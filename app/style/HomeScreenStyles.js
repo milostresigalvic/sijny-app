@@ -19,15 +19,14 @@ export default StyleSheet.create({
     borderBottomWidth: 2,
     width: "100%",
     borderColor: "#001d3d",
-    paddingTop: 0,
+    paddingBottom: 5,
     borderBottomWidth: 2,
-    marginBottom: 10,
   },
   logo: {
     width: wp("100%"),
     height: hp("7%"),
     alignSelf: "center",
-    marginBottom: 18,
+    marginBottom: 0,
     padding: 0,
   },
   button: {
@@ -92,7 +91,7 @@ export default StyleSheet.create({
     width: "100%",
   },
   postDate: {
-    fontSize: 13,
+    fontSize: 11,
     color: "#999999",
     marginTop: 2,
   },
@@ -171,22 +170,24 @@ export default StyleSheet.create({
   bannerWrap: {
     width: "100%",
     alignItems: "center",
-    marginBottom: 10,
+    marginBottom: 0,
+
+    padding: 0,
   },
   banner: {
     width: "95%",
-    borderRadius: 10,
+    borderRadius: 8,
     overflow: "hidden",
   },
   scrollContainer: {
     marginBottom: 60,
   },
   title: {
-    backgroundColor: "#333333",
+    backgroundColor: "#f5efe3",
     fontFamily: "RobotoBold",
     lineHeight: 18,
     width: "100%",
-    color: "#ffffff",
+    color: "#071425",
     textAlign: "center",
     paddingTop: 17,
     paddingBottom: 10,
@@ -233,7 +234,7 @@ export default StyleSheet.create({
     fontSize: 18,
   },
   eventDate: {
-    fontSize: 13,
+    fontSize: 1,
     color: "#999999",
     marginTop: 2,
     paddingLeft: 15,

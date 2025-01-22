@@ -68,7 +68,7 @@ export default function HomeScreen() {
       setPost(null);
       setError(null);
       fetchData(
-        `https://hyderi.org.uk/wp-json/tribe/events/v1/events/${postId}`,
+        `https://sijny.org.uk/wp-json/tribe/events/v1/events/${postId}`,
         setPost
       );
     } else {

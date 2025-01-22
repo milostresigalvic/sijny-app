@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Hyderi Community centre",
-    "slug": "hyderiapp",
+    "name": "sijny Community centre",
+    "slug": "sijnyapp",
 
     "version": "1.0.3",
     "orientation": "portrait",
@@ -16,7 +16,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "org.hyderi.app",
+      "bundleIdentifier": "org.sijny.app",
       "infoPlist": {
         "NSCameraUsageDescription": "No Camera Functionality used within the app."
       }
@@ -26,7 +26,7 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "org.hyderi.app",
+      "package": "org.sijny.app",
       "permissions": ["android.permission.SCHEDULE_EXACT_ALARM"]
     },
     "web": {

@@ -45,7 +45,7 @@ function openPortal() {
 export const SectionHeader = ({ icon, title }) => (
   <View style={styles.sectionHeader}>
     <Text style={styles.title}>
-      <Icon name={icon} size={17} color="#fff" /> {title}
+      <Icon name={icon} size={17} color="#071425" /> {title}
     </Text>
   </View>
 );
@@ -200,13 +200,13 @@ export default function HomeScreen() {
 
   const fetchPostsAndEvents = async () => {
     fetchData(
-      "https://hyderi.org.uk//wp-json/wp/v2/posts",
+      "https://sijny.org.uk//wp-json/wp/v2/posts",
       setPosts,
       setLoading,
       setError
     );
     fetchData(
-      "https://hyderi.org.uk/wp-json/tribe/events/v1/events",
+      "https://sijny.org.uk/wp-json/tribe/events/v1/events",
       (data) => {
         setEvents(data.events || []);
       },
@@ -219,7 +219,7 @@ export default function HomeScreen() {
     const data = content.data;
     if (data.category === "news") {
       fetchData(
-        "https://hyderi.org.uk//wp-json/wp/v2/posts",
+        "https://sijny.org.uk//wp-json/wp/v2/posts",
         (posts: any) => {
           router.push(`post?postId=${posts[0].id}`);
         },
@@ -280,9 +280,18 @@ export default function HomeScreen() {
         <ScrollView>
           <View style={styles.logoWrap}>
             <Image
-              source={require("../assets/images/AC-Logo.png")}
+              source={require("../assets/images/main-logo.png")}
               style={styles.logo}
               resizeMode="contain"
+            />
+          </View>
+
+          <View style={styles.bannerWrap}>
+            <Image
+              source={require("../assets/images/sijnyCentre.png")}
+              style={[styles.banner, { height: imageHeight }]}
+              resizeMode="cover"
+              onLayout={onImageLayout}
             />
           </View>
 

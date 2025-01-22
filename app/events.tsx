@@ -38,7 +38,7 @@ export default function HomeScreen() {
       setIsFetching(true); // Prevent additional API calls
       console.log(`Fetching events for page ${currentPage}...`);
       const response = await fetch(
-        `https://hyderi.org.uk/wp-json/tribe/events/v1/events?per_page=50&page=${currentPage}`
+        `https://sijny.org.uk/wp-json/tribe/events/v1/events?per_page=50&page=${currentPage}`
       );
       const json = await response.json();
 

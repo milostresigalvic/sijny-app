@@ -21,7 +21,7 @@ export default function HomeScreen() {
   }, [navigation]);
 
   const openYouTube = () => {
-    Linking.openURL("https://www.youtube.com/c/hyderi");
+    Linking.openURL("https://www.youtube.com/c/sijny");
   };
 
   return (
@@ -36,7 +36,7 @@ export default function HomeScreen() {
 
             <Pressable onPress={openYouTube} style={style.youtubeButton}>
               <Icon name="logo-youtube" style={style.youtubeIcon} />
-              <Text style={style.youtubeText}>Hyderi Islamic Centre</Text>
+              <Text style={style.youtubeText}>sijny Islamic Centre</Text>
             </Pressable>
           </View>
         </View>
